@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "388915739027",
+    "firebase_url": "https://monitorizarea-activitatii-pers.firebaseio.com",
+    "project_id": "monitorizarea-activitatii-pers",
+    "storage_bucket": "monitorizarea-activitatii-pers.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388915739027:android:5644cb5201cd8df7015066",
+        "android_client_info": {
+          "package_name": "catalinadumitru.monitorizareaactivitatiipersonale"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "388915739027-i6aqekran5o5ve24ju02b450cne2g34l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "catalinadumitru.monitorizareaactivitatiipersonale",
+            "certificate_hash": "9fde5e3fe64c162f339e89a4e282bc5b1e047606"
+          }
+        },
+        {
+          "client_id": "388915739027-csdqfp39aldcenbr6cjlvvmnhlj0j04m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw5uIfhc_1KvPzrmfZrsr9P2X1EVUvOd0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "388915739027-csdqfp39aldcenbr6cjlvvmnhlj0j04m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

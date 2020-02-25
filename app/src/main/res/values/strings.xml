@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">Monitorizarea activitatii personale</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="welcome_text"><i>Note down your success step by step</i></string>
+    <string name="log_in"><b>LOGIN</b></string>
+    <string name="hint_username">username</string>
+    <string name="hint_password">password</string>
+    <string name="enter_account">ACCESS</string>
+    <string name="question1">Have an account?</string>
+    <string name="question2">Want to register?</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="already_have_account"><b>Already have an account? <i>LOGIN</i></b></string>
+    <string name="name">Name:</string>
+    <string name="username">Username:</string>
+    <string name="password">Password</string>
+    <string name="email_hint">yourEmail@here.please</string>
+    <string name="email">E-mail</string>
+    <string name="changePicture">Change Picture</string>
+    <string name="changePassword">Change password</string>
+    <string name="name_here">Enter your name here</string>
+    <string name="username_here">Enter your username here</string>
+    <string name="birthday">Birthday</string>
+    <string name="add">Add activities in your list</string>
+    <string name="Add_activity">ADD ACTIVITY</string>
+    <string name="Rate"><i><b>Rate your day!!</b></i></string>
+    <string name="submitBtn">Submit</string>
+    <string name="daySelector">Select the day you are interested in</string>
+    <string name="Show">show statistics</string>
+    <string name="download">Download picture from the internet:</string>
+    <string name="set">Set profile picture</string>
+
+    <string name="Romania">Romania</string>
+    <string name="Moldova">Moldova</string>
+    <string name="Germania">Germania</string>
+    <string name="Anglia">Anglia</string>
+    <string name="Elevetia">Elvetia</string>
+    <string name="Olanda">Olanda</string>
+    <string name="Suedia">Suedia</string>
+    <string name="Norvegia">Norvegia</string>
+    <string name="Irlanda">Irlanda</string>
+    <string name="Italia">Italia</string>
+    <string name="Polonia">Polonia</string>
+    <string name="USA">USA</string>
+    <string name="country">Choose a country</string>
+    <string name="country_label">Country</string>
+    <string name="done">Done for today</string>
+    <string name="save_pic">Save picture in Gallery</string>
+    <string name="todo">TODO</string>
+    <string name="choose_location">Choose location</string>
+    <string name="choose_birthday">Choose your birthday</string>
+    <string name="show_activities">Show activities</string>
+    <string name="SAVE">Save to text</string>
+
+    <string name="show_stat_for_the_day">Statistics for this day  </string>
+    <string name="rating_of_the_day">The rating for the day is: </string>
+    <string name="no_of_activities_p1">There are </string>
+    <string name="no_of_activities_p2"> activities today</string>
+    <string name="save_firebase">Save to Firebase</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="get_data">Get data from Firebase</string>
+    <string name="open">Open for graphic</string>
+    <string name="draw_graph">Draw graph</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="openMaps">open Maps</string>
+
+</resources>

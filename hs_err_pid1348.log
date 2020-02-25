@@ -1,0 +1,457 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1790576 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:389), pid=1348, tid=0x00000000000045d8
+#
+# JRE version: OpenJDK Runtime Environment (8.0_202-b03) (build 1.8.0_202-release-1483-b03)
+# Java VM: OpenJDK 64-Bit Server VM (25.202-b03 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000169bf800):  JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=17880, stack(0x0000000018120000,0x0000000018220000)]
+
+Stack: [0x0000000018120000,0x0000000018220000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+Current CompileTask:
+C2:57656219 79658       4       com.android.tools.r8.graph.DexDebugEventBuilder::a (1005 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000001bb41000 JavaThread "ForkJoinPool.commonPool-worker-3" daemon [_thread_blocked, id=6340, stack(0x0000000066bb0000,0x0000000066cb0000)]
+  0x000000001bb3a800 JavaThread "ForkJoinPool.commonPool-worker-2" daemon [_thread_blocked, id=2836, stack(0x0000000066ab0000,0x0000000066bb0000)]
+  0x000000001e028000 JavaThread "Cache worker for Java compile cache (D:\Facultate\Anul III\Semestrul 1\Android\Proiect Android\.gradle\5.4.1\javaCompile)" [_thread_blocked, id=15584, stack(0x0000000065fd0000,0x00000000660d0000)]
+  0x000000001e026800 JavaThread "stdout" [_thread_in_native, id=16568, stack(0x0000000065ed0000,0x0000000065fd0000)]
+  0x000000001e02d000 JavaThread "stderr" [_thread_in_native, id=16240, stack(0x0000000065dd0000,0x0000000065ed0000)]
+  0x0000000021d2a800 JavaThread "stdout" [_thread_in_native, id=18376, stack(0x0000000065cd0000,0x0000000065dd0000)]
+  0x0000000021d21800 JavaThread "stderr" [_thread_in_native, id=12848, stack(0x0000000065bd0000,0x0000000065cd0000)]
+  0x0000000021d28000 JavaThread "stdout" [_thread_in_native, id=11624, stack(0x0000000065ad0000,0x0000000065bd0000)]
+  0x0000000021d25000 JavaThread "stderr" [_thread_in_native, id=2740, stack(0x00000000659d0000,0x0000000065ad0000)]
+  0x0000000021d27800 JavaThread "stdout" [_thread_in_native, id=18300, stack(0x0000000061900000,0x0000000061a00000)]
+  0x000000001d596800 JavaThread "stderr" [_thread_in_native, id=8268, stack(0x000000005e300000,0x000000005e400000)]
+  0x000000001d58e000 JavaThread "pool-201-thread-1" [_thread_blocked, id=13336, stack(0x000000005c160000,0x000000005c260000)]
+  0x000000001d58d800 JavaThread "WorkerExecutor Queue Thread 4" [_thread_in_native, id=13184, stack(0x000000005a7b0000,0x000000005a8b0000)]
+  0x000000001d592000 JavaThread "WorkerExecutor Queue Thread 3" [_thread_blocked, id=360, stack(0x0000000053850000,0x0000000053950000)]
+  0x000000001d58f800 JavaThread "WorkerExecutor Queue Thread 2" [_thread_blocked, id=13348, stack(0x0000000052f50000,0x0000000053050000)]
+  0x0000000018a70000 JavaThread "Cache worker for execution history cache (D:\Facultate\Anul III\Semestrul 1\Android\Proiect Android\.gradle\5.4.1\executionHistory)" [_thread_blocked, id=2008, stack(0x000000004b120000,0x000000004b220000)]
+  0x0000000018a68800 JavaThread "Execution worker for ':' Thread 3" [_thread_blocked, id=18336, stack(0x000000004a400000,0x000000004a500000)]
+  0x0000000018a68000 JavaThread "Execution worker for ':' Thread 2" [_thread_blocked, id=2128, stack(0x00000000414e0000,0x00000000415e0000)]
+  0x0000000018a6e000 JavaThread "Execution worker for ':'" [_thread_in_Java, id=6152, stack(0x000000003fc60000,0x000000003fd60000)]
+  0x0000000018a6c800 JavaThread "Cache worker for file content cache (D:\Facultate\Anul III\Semestrul 1\Android\Proiect Android\.gradle\5.4.1\fileContent)" [_thread_blocked, id=672, stack(0x000000003f760000,0x000000003f860000)]
+  0x0000000018a6a000 JavaThread "Cache worker for Build Output Cleanup Cache (D:\Facultate\Anul III\Semestrul 1\Android\Proiect Android\.gradle\buildOutputCleanup)" [_thread_in_native, id=15220, stack(0x000000003ed80000,0x000000003ee80000)]
+  0x0000000018a65800 JavaThread "Build operations Thread 4" [_thread_blocked, id=5352, stack(0x000000003bd40000,0x000000003be40000)]
+  0x0000000018a64800 JavaThread "Build operations Thread 3" [_thread_blocked, id=16560, stack(0x0000000038ea0000,0x0000000038fa0000)]
+  0x0000000018a66000 JavaThread "Build operations Thread 2" [_thread_blocked, id=14648, stack(0x00000000335a0000,0x00000000336a0000)]
+  0x0000000018a6b800 JavaThread "Build operations" [_thread_blocked, id=17704, stack(0x00000000263b0000,0x00000000264b0000)]
+  0x000000002dce0000 JavaThread "Cache worker for cache directory md-rule (C:\Users\Catalina Dumitru\.gradle\caches\5.4.1\md-rule)" [_thread_blocked, id=16416, stack(0x00000000241e0000,0x00000000242e0000)]
+  0x000000002dce1000 JavaThread "Cache worker for cache directory md-supplier (C:\Users\Catalina Dumitru\.gradle\caches\5.4.1\md-supplier)" [_thread_blocked, id=13932, stack(0x00000000236e0000,0x00000000237e0000)]
+  0x000000002dcdf800 JavaThread "Cache worker for file hash cache (D:\Facultate\Anul III\Semestrul 1\Android\Proiect Android\.gradle\5.4.1\fileHashes)" [_thread_blocked, id=18304, stack(0x0000000020f50000,0x0000000021050000)]
+  0x000000002dcdd000 JavaThread "Thread-2250" [_thread_blocked, id=12956, stack(0x000000001f2e0000,0x000000001f3e0000)]
+  0x000000002dcdc800 JavaThread "Stdin handler" [_thread_blocked, id=2172, stack(0x000000001ede0000,0x000000001eee0000)]
+  0x000000002dcd4000 JavaThread "Asynchronous log dispatcher for DefaultDaemonConnection: socket connection from /127.0.0.1:58182 to /127.0.0.1:53975" [_thread_blocked, id=10348, stack(0x000000001ea00000,0x000000001eb00000)]
+  0x000000002dcdb000 JavaThread "Daemon worker Thread 79" [_thread_in_Java, id=440, stack(0x000000001b290000,0x000000001b390000)]
+  0x000000002dcd5000 JavaThread "Cancel handler" [_thread_blocked, id=11812, stack(0x000000001b190000,0x000000001b290000)]
+  0x000000002dcda000 JavaThread "Handler for socket connection from /127.0.0.1:58182 to /127.0.0.1:53975" [_thread_in_native, id=5724, stack(0x000000001b090000,0x000000001b190000)]
+  0x000000002dcd8000 JavaThread "Daemon Thread 79" [_thread_blocked, id=1068, stack(0x0000000001380000,0x0000000001480000)]
+  0x0000000021d22000 JavaThread "MarlinRenderer Disposer" daemon [_thread_blocked, id=11024, stack(0x000000003fec0000,0x000000003ffc0000)]
+  0x0000000021d26000 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=2020, stack(0x000000003fd60000,0x000000003fe60000)]
+  0x00000000198fa000 JavaThread "Cache worker for Java compile cache (C:\Users\Catalina Dumitru\.gradle\caches\5.4.1\javaCompile)" [_thread_blocked, id=3644, stack(0x00000000254b0000,0x00000000255b0000)]
+  0x00000000198fb000 JavaThread "Cache worker for file content cache (C:\Users\Catalina Dumitru\.gradle\caches\5.4.1\fileContent)" [_thread_blocked, id=16208, stack(0x00000000235e0000,0x00000000236e0000)]
+  0x00000000198ff800 JavaThread "Memory manager" [_thread_blocked, id=5784, stack(0x0000000021260000,0x0000000021360000)]
+  0x000000001e7a4800 JavaThread "Cache worker for execution history cache (C:\Users\Catalina Dumitru\.gradle\caches\5.4.1\executionHistory)" [_thread_blocked, id=4220, stack(0x0000000020a50000,0x0000000020b50000)]
+  0x0000000019539000 JavaThread "Cache worker for journal cache (C:\Users\Catalina Dumitru\.gradle\caches\journal-1)" [_thread_in_native, id=6292, stack(0x000000001b590000,0x000000001b690000)]
+  0x0000000019538800 JavaThread "File lock request listener" [_thread_in_native, id=18364, stack(0x000000001b490000,0x000000001b590000)]
+  0x000000001953b800 JavaThread "Cache worker for file hash cache (C:\Users\Catalina Dumitru\.gradle\caches\5.4.1\fileHashes)" [_thread_blocked, id=732, stack(0x000000001b390000,0x000000001b490000)]
+  0x00000000199e7800 JavaThread "Daemon periodic checks" [_thread_blocked, id=16840, stack(0x000000001a990000,0x000000001aa90000)]
+  0x00000000184d2000 JavaThread "Incoming local TCP Connector on port 58182" [_thread_in_native, id=11376, stack(0x000000001a750000,0x000000001a850000)]
+  0x00000000191fd000 JavaThread "Daemon health stats" [_thread_blocked, id=18428, stack(0x000000001a110000,0x000000001a210000)]
+  0x0000000016a1e800 JavaThread "Service Thread" daemon [_thread_blocked, id=17884, stack(0x0000000018720000,0x0000000018820000)]
+  0x00000000169ca000 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=16972, stack(0x0000000018220000,0x0000000018320000)]
+=>0x00000000169bf800 JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=17880, stack(0x0000000018120000,0x0000000018220000)]
+  0x00000000169bc800 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=17184, stack(0x0000000018020000,0x0000000018120000)]
+  0x00000000169bb000 JavaThread "Attach Listener" daemon [_thread_blocked, id=6532, stack(0x0000000017f20000,0x0000000018020000)]
+  0x00000000169b9800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=17992, stack(0x0000000017e20000,0x0000000017f20000)]
+  0x0000000003029800 JavaThread "Finalizer" daemon [_thread_blocked, id=16772, stack(0x0000000017c20000,0x0000000017d20000)]
+  0x0000000003021000 JavaThread "Reference Handler" daemon [_thread_blocked, id=15824, stack(0x0000000017b20000,0x0000000017c20000)]
+  0x000000000304e000 JavaThread "main" [_thread_blocked, id=7444, stack(0x0000000002e20000,0x0000000002f20000)]
+
+Other Threads:
+  0x0000000016986000 VMThread [stack: 0x0000000017a20000,0x0000000017b20000] [id=14924]
+  0x000000001834a800 WatcherThread [stack: 0x0000000018820000,0x0000000018920000] [id=17888]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000000000304cf60] SystemDictionary_lock - owner thread: 0x0000000018a6e000
+
+OutOfMemory and StackOverflow Exception counts:
+OutOfMemoryError java_heap_errors=1
+
+heap address: 0x00000000a0000000, size: 1536 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+Heap:
+ PSYoungGen      total 444416K, used 205699K [0x00000000e0000000, 0x0000000100000000, 0x0000000100000000)
+  eden space 364544K, 51% used [0x00000000e0000000,0x00000000eb7a9158,0x00000000f6400000)
+  from space 79872K, 22% used [0x00000000f6400000,0x00000000f7537ab8,0x00000000fb200000)
+  to   space 77824K, 0% used [0x00000000fb400000,0x00000000fb400000,0x0000000100000000)
+ ParOldGen       total 459776K, used 409607K [0x00000000a0000000, 0x00000000bc100000, 0x00000000e0000000)
+  object space 459776K, 89% used [0x00000000a0000000,0x00000000b9001e98,0x00000000bc100000)
+ Metaspace       used 761606K, capacity 780021K, committed 780200K, reserved 1736704K
+  class space    used 89201K, capacity 93571K, committed 93696K, reserved 1048576K
+
+Card table byte_map: [0x0000000012410000,0x0000000012720000] byte_map_base: 0x0000000011f10000
+
+Marking Bits: (ParMarkBitMap*) 0x000000005fd29f30
+ Begin Bits: [0x0000000012d20000, 0x0000000014520000)
+ End Bits:   [0x0000000014520000, 0x0000000015d20000)
+
+Polling page: 0x0000000001220000
+
+CodeCache: size=245760Kb used=213598Kb max_used=214142Kb free=32161Kb
+ bounds [0x0000000003050000, 0x00000000102d0000, 0x0000000012050000]
+ total_blobs=57801 nmethods=56763 adapters=947
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 57655.869 Thread 0x00000000169ca000 79671       1       com.android.tools.r8.ir.code.InstanceOf::instructionTypeCanThrow (2 bytes)
+Event: 57655.869 Thread 0x00000000169ca000 nmethod 79671 0x000000000dc48a50 code [0x000000000dc48ba0, 0x000000000dc48cb0]
+Event: 57655.889 Thread 0x00000000169bc800 nmethod 79669 0x000000001024ba90 code [0x000000001024bc40, 0x000000001024ca98]
+Event: 57655.889 Thread 0x00000000169bc800 79670 %     4       com.android.tools.r8.ir.conversion.IRBuilder::a @ 777 (2002 bytes)
+Event: 57655.895 Thread 0x00000000169ca000 79672       1       com.android.tools.r8.ir.code.ArrayLength::instructionTypeCanThrow (2 bytes)
+Event: 57655.896 Thread 0x00000000169ca000 nmethod 79672 0x000000000c7fd650 code [0x000000000c7fd7a0, 0x000000000c7fd8b0]
+Event: 57655.943 Thread 0x00000000169ca000 79674       1       com.android.tools.r8.ir.code.InstanceOf::Y0 (2 bytes)
+Event: 57655.944 Thread 0x00000000169ca000 nmethod 79674 0x0000000003297690 code [0x00000000032977e0, 0x00000000032978f0]
+Event: 57656.069 Thread 0x00000000169ca000 79676       1       com.android.tools.r8.ir.code.ArrayGet::F1 (4 bytes)
+Event: 57656.070 Thread 0x00000000169ca000 nmethod 79676 0x00000000032973d0 code [0x0000000003297520, 0x0000000003297630]
+
+GC Heap History (10 events):
+Event: 57049.519 GC heap before
+{Heap before GC invocations=251 (full 13):
+ PSYoungGen      total 427008K, used 379030K [0x00000000e0000000, 0x00000000ff680000, 0x0000000100000000)
+  eden space 351744K, 100% used [0x00000000e0000000,0x00000000f5780000,0x00000000f5780000)
+  from space 75264K, 36% used [0x00000000fad00000,0x00000000fc7a5b98,0x00000000ff680000)
+  to   space 81408K, 0% used [0x00000000f5780000,0x00000000f5780000,0x00000000fa700000)
+ ParOldGen       total 459776K, used 375782K [0x00000000a0000000, 0x00000000bc100000, 0x00000000e0000000)
+  object space 459776K, 81% used [0x00000000a0000000,0x00000000b6ef9a48,0x00000000bc100000)
+ Metaspace       used 753203K, capacity 771391K, committed 771752K, reserved 1728512K
+  class space    used 88240K, capacity 92548K, committed 92672K, reserved 1048576K
+Event: 57050.763 GC heap after
+Heap after GC invocations=251 (full 13):
+ PSYoungGen      total 433152K, used 11565K [0x00000000e0000000, 0x0000000100000000, 0x0000000100000000)
+  eden space 351744K, 0% used [0x00000000e0000000,0x00000000e0000000,0x00000000f5780000)
+  from space 81408K, 14% used [0x00000000f5780000,0x00000000f62cb4d8,0x00000000fa700000)
+  to   space 80384K, 0% used [0x00000000fb180000,0x00000000fb180000,0x0000000100000000)
+ ParOldGen       total 459776K, used 378986K [0x00000000a0000000, 0x00000000bc100000, 0x00000000e0000000)
+  object space 459776K, 82% used [0x00000000a0000000,0x00000000b721ab70,0x00000000bc100000)
+ Metaspace       used 753203K, capacity 771391K, committed 771752K, reserved 1728512K
+  class space    used 88240K, capacity 92548K, committed 92672K, reserved 1048576K
+}
+Event: 57618.765 GC heap before
+{Heap before GC invocations=252 (full 13):
+ PSYoungGen      total 433152K, used 363309K [0x00000000e0000000, 0x0000000100000000, 0x0000000100000000)
+  eden space 351744K, 100% used [0x00000000e0000000,0x00000000f5780000,0x00000000f5780000)
+  from space 81408K, 14% used [0x00000000f5780000,0x00000000f62cb4d8,0x00000000fa700000)
+  to   space 80384K, 0% used [0x00000000fb180000,0x00000000fb180000,0x0000000100000000)
+ ParOldGen       total 459776K, used 378986K [0x00000000a0000000, 0x00000000bc100000, 0x00000000e0000000)
+  object space 459776K, 82% used [0x00000000a0000000,0x00000000b721ab70,0x00000000bc100000)
+ Metaspace       used 753379K, capacity 771583K, committed 771752K, reserved 1728512K
+  class space    used 88257K, capacity 92560K, committed 92672K, reserved 1048576K
+Event: 57619.769 GC heap after
+Heap after GC invocations=252 (full 13):
+ PSYoungGen      total 438784K, used 12592K [0x00000000e0000000, 0x00000000ffc00000, 0x0000000100000000)
+  eden space 362496K, 0% used [0x00000000e0000000,0x00000000e0000000,0x00000000f6200000)
+  from space 76288K, 16% used [0x00000000fb180000,0x00000000fbdcc158,0x00000000ffc00000)
+  to   space 78848K, 0% used [0x00000000f6200000,0x00000000f6200000,0x00000000faf00000)
+ ParOldGen       total 459776K, used 383567K [0x00000000a0000000, 0x00000000bc100000, 0x00000000e0000000)
+  object space 459776K, 83% used [0x00000000a0000000,0x00000000b7693e80,0x00000000bc100000)
+ Metaspace       used 753379K, capacity 771583K, committed 771752K, reserved 1728512K
+  class space    used 88257K, capacity 92560K, committed 92672K, reserved 1048576K
+}
+Event: 57628.563 GC heap before
+{Heap before GC invocations=253 (full 13):
+ PSYoungGen      total 438784K, used 375088K [0x00000000e0000000, 0x00000000ffc00000, 0x0000000100000000)
+  eden space 362496K, 100% used [0x00000000e0000000,0x00000000f6200000,0x00000000f6200000)
+  from space 76288K, 16% used [0x00000000fb180000,0x00000000fbdcc158,0x00000000ffc00000)
+  to   space 78848K, 0% used [0x00000000f6200000,0x00000000f6200000,0x00000000faf00000)
+ ParOldGen       total 459776K, used 383567K [0x00000000a0000000, 0x00000000bc100000, 0x00000000e0000000)
+  object space 459776K, 83% used [0x00000000a0000000,0x00000000b7693e80,0x00000000bc100000)
+ Metaspace       used 753699K, capacity 771953K, committed 772008K, reserved 1728512K
+  class space    used 88287K, capacity 92617K, committed 92672K, reserved 1048576K
+Event: 57629.315 GC heap after
+Heap after GC invocations=253 (full 13):
+ PSYoungGen      total 441344K, used 23913K [0x00000000e0000000, 0x00000000ffb80000, 0x0000000100000000)
+  eden space 362496K, 0% used [0x00000000e0000000,0x00000000e0000000,0x00000000f6200000)
+  from space 78848K, 30% used [0x00000000f6200000,0x00000000f795a750,0x00000000faf00000)
+  to   space 75264K, 0% used [0x00000000fb200000,0x00000000fb200000,0x00000000ffb80000)
+ ParOldGen       total 459776K, used 395527K [0x00000000a0000000, 0x00000000bc100000, 0x00000000e0000000)
+  object space 459776K, 86% used [0x00000000a0000000,0x00000000b8241ea8,0x00000000bc100000)
+ Metaspace       used 753699K, capacity 771953K, committed 772008K, reserved 1728512K
+  class space    used 88287K, capacity 92617K, committed 92672K, reserved 1048576K
+}
+Event: 57642.156 GC heap before
+{Heap before GC invocations=254 (full 13):
+ PSYoungGen      total 441344K, used 386409K [0x00000000e0000000, 0x00000000ffb80000, 0x0000000100000000)
+  eden space 362496K, 100% used [0x00000000e0000000,0x00000000f6200000,0x00000000f6200000)
+  from space 78848K, 30% used [0x00000000f6200000,0x00000000f795a750,0x00000000faf00000)
+  to   space 75264K, 0% used [0x00000000fb200000,0x00000000fb200000,0x00000000ffb80000)
+ ParOldGen       total 459776K, used 395527K [0x00000000a0000000, 0x00000000bc100000, 0x00000000e0000000)
+  object space 459776K, 86% used [0x00000000a0000000,0x00000000b8241ea8,0x00000000bc100000)
+ Metaspace       used 760815K, capacity 779157K, committed 779304K, reserved 1734656K
+  class space    used 89102K, capacity 93461K, committed 93568K, reserved 1048576K
+Event: 57642.823 GC heap after
+Heap after GC invocations=254 (full 13):
+ PSYoungGen      total 439808K, used 54856K [0x00000000e0000000, 0x0000000100000000, 0x0000000100000000)
+  eden space 364544K, 0% used [0x00000000e0000000,0x00000000e0000000,0x00000000f6400000)
+  from space 75264K, 72% used [0x00000000fb200000,0x00000000fe792020,0x00000000ffb80000)
+  to   space 79872K, 0% used [0x00000000f6400000,0x00000000f6400000,0x00000000fb200000)
+ ParOldGen       total 459776K, used 402040K [0x00000000a0000000, 0x00000000bc100000, 0x00000000e0000000)
+  object space 459776K, 87% used [0x00000000a0000000,0x00000000b889e1d8,0x00000000bc100000)
+ Metaspace       used 760815K, capacity 779157K, committed 779304K, reserved 1734656K
+  class space    used 89102K, capacity 93461K, committed 93568K, reserved 1048576K
+}
+Event: 57653.974 GC heap before
+{Heap before GC invocations=255 (full 13):
+ PSYoungGen      total 439808K, used 419400K [0x00000000e0000000, 0x0000000100000000, 0x0000000100000000)
+  eden space 364544K, 100% used [0x00000000e0000000,0x00000000f6400000,0x00000000f6400000)
+  from space 75264K, 72% used [0x00000000fb200000,0x00000000fe792020,0x00000000ffb80000)
+  to   space 79872K, 0% used [0x00000000f6400000,0x00000000f6400000,0x00000000fb200000)
+ ParOldGen       total 459776K, used 402040K [0x00000000a0000000, 0x00000000bc100000, 0x00000000e0000000)
+  object space 459776K, 87% used [0x00000000a0000000,0x00000000b889e1d8,0x00000000bc100000)
+ Metaspace       used 761498K, capacity 779875K, committed 780072K, reserved 1736704K
+  class space    used 89182K, capacity 93550K, committed 93568K, reserved 1048576K
+Event: 57654.181 GC heap after
+Heap after GC invocations=255 (full 13):
+ PSYoungGen      total 444416K, used 17630K [0x00000000e0000000, 0x0000000100000000, 0x0000000100000000)
+  eden space 364544K, 0% used [0x00000000e0000000,0x00000000e0000000,0x00000000f6400000)
+  from space 79872K, 22% used [0x00000000f6400000,0x00000000f7537ab8,0x00000000fb200000)
+  to   space 77824K, 0% used [0x00000000fb400000,0x00000000fb400000,0x0000000100000000)
+ ParOldGen       total 459776K, used 409607K [0x00000000a0000000, 0x00000000bc100000, 0x00000000e0000000)
+  object space 459776K, 89% used [0x00000000a0000000,0x00000000b9001e98,0x00000000bc100000)
+ Metaspace       used 761498K, capacity 779875K, committed 780072K, reserved 1736704K
+  class space    used 89182K, capacity 93550K, committed 93568K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 57655.986 Thread 0x0000000018a6e000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x000000001020ea10 method=com.android.tools.r8.ir.optimize.CodeRewriter.e(Lcom/android/tools/r8/ir/code/Instruction;)Z @ 211
+Event: 57655.986 Thread 0x0000000018a6e000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x000000001020ea10 method=com.android.tools.r8.ir.optimize.CodeRewriter.e(Lcom/android/tools/r8/ir/code/Instruction;)Z @ 211
+Event: 57656.155 Thread 0x000000002dcdb000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00000000102185e8 method=com.android.tools.r8.ir.analysis.g.e.b(Lcom/android/tools/r8/ir/code/Instruction;)V @ 223
+Event: 57656.155 Thread 0x000000002dcdb000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00000000102185e8 method=com.android.tools.r8.ir.analysis.g.e.b(Lcom/android/tools/r8/ir/code/Instruction;)V @ 223
+Event: 57656.206 Thread 0x0000000018a68000 Uncommon trap: reason=speculate_class_check action=maybe_recompile pc=0x0000000005d71b5c method=org.gradle.internal.Try.map(Ljava/util/function/Function;)Lorg/gradle/internal/Try; @ 10
+Event: 57656.211 Thread 0x0000000018a68000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x000000000524103c method=org.gradle.api.internal.artifacts.transform.ImmutableTransformationWorkspaceProvider.withWorkspace(Lorg/gradle/api/internal/artifacts/transform/TransformationWorkspaceId
+Event: 57656.211 Thread 0x0000000018a68000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x000000000f701bf8 method=org.gradle.api.internal.artifacts.transform.AbstractCachingTransformationWorkspaceProvider.withWorkspace(Lorg/gradle/api/internal/artifacts/transform/TransformationWorks
+Event: 57656.211 Thread 0x0000000018a68000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x000000000652f69c method=org.gradle.api.internal.artifacts.transform.TransformationStep.lambda$transform$0(Lcom/google/common/collect/ImmutableList;Lorg/gradle/api/internal/artifacts/transform/T
+Event: 57656.212 Thread 0x0000000018a68000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x0000000004d31468 method=org.gradle.api.internal.artifacts.transform.TransformationNode$ArtifactTransformationStepBuildOperation.call(Lorg/gradle/internal/operations/BuildOperationContext;)Lorg/
+Event: 57656.212 Thread 0x0000000018a68000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x0000000007868104 method=org.gradle.api.internal.artifacts.transform.TransformationNode$ChainedTransformationNode.execute(Lorg/gradle/internal/operations/BuildOperationExecutor;Lorg/gradle/api/i
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 57650.928 Thread 0x0000000018a68000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000eba7dc68) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 710]
+Event: 57650.986 Thread 0x0000000018a6e000 Implicit null exception at 0x0000000004d26565 to 0x0000000004d272a9
+Event: 57651.015 Thread 0x000000002dcdb000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000ec7459f8) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 710]
+Event: 57651.736 Thread 0x000000002dcdb000 Implicit null exception at 0x000000000dc5b58c to 0x000000000dc5bc61
+Event: 57653.325 Thread 0x0000000018a68000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000f1241fa8) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 710]
+Event: 57653.335 Thread 0x0000000018a6e000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000f1cf3518) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 710]
+Event: 57653.523 Thread 0x0000000018a68000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000f2eee668) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 710]
+Event: 57655.559 Thread 0x0000000018a6e000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000e6174ee0) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 710]
+Event: 57655.620 Thread 0x0000000018a68000 Exception <a 'sun/nio/fs/WindowsException'> (0x00000000e5e105c0) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 710]
+Event: 57656.200 Thread 0x0000000018a68000 Exception <a 'java/lang/OutOfMemoryError'> (0x00000000eb2b65c8) thrown at [D:\src\AOSP-openjdk-cygwin\jdk8u\hotspot\src\share\vm\prims\jni.cpp, line 736]
+
+Events (10 events):
+Event: 57656.211 Thread 0x0000000018a68000 DEOPT UNPACKING pc=0x000000000309557b sp=0x00000000415def58 mode 2
+Event: 57656.211 Thread 0x0000000018a68000 Uncommon trap: trap_request=0xffffffde fr.pc=0x000000000652f69c
+Event: 57656.211 Thread 0x0000000018a68000 DEOPT PACKING pc=0x000000000652f69c sp=0x00000000415df0c0
+Event: 57656.211 Thread 0x0000000018a68000 DEOPT UNPACKING pc=0x000000000309557b sp=0x00000000415def28 mode 2
+Event: 57656.212 Thread 0x0000000018a68000 Uncommon trap: trap_request=0xffffffde fr.pc=0x0000000004d31468
+Event: 57656.212 Thread 0x0000000018a68000 DEOPT PACKING pc=0x0000000004d31468 sp=0x00000000415df140
+Event: 57656.212 Thread 0x0000000018a68000 DEOPT UNPACKING pc=0x000000000309557b sp=0x00000000415df080 mode 2
+Event: 57656.212 Thread 0x0000000018a68000 Uncommon trap: trap_request=0xffffffde fr.pc=0x0000000007868104
+Event: 57656.212 Thread 0x0000000018a68000 DEOPT PACKING pc=0x0000000007868104 sp=0x00000000415df330
+Event: 57656.212 Thread 0x0000000018a68000 DEOPT UNPACKING pc=0x000000000309557b sp=0x00000000415df250 mode 2
+
+
+Dynamic libraries:
+0x00007ff63b0d0000 - 0x00007ff63b101000 	D:\Programe Facultate\android studio\jre\bin\java.exe
+0x00007fff9f920000 - 0x00007fff9fb10000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007fff9e4f0000 - 0x00007fff9e5a2000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007fff9d700000 - 0x00007fff9d9a3000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007fff9e5b0000 - 0x00007fff9e653000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007fff9e2b0000 - 0x00007fff9e34e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007fff9f840000 - 0x00007fff9f8d7000 	C:\WINDOWS\System32\sechost.dll
+0x00007fff9f370000 - 0x00007fff9f490000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007fff9f5b0000 - 0x00007fff9f744000 	C:\WINDOWS\System32\USER32.dll
+0x00007fff9c910000 - 0x00007fff9c931000 	C:\WINDOWS\System32\win32u.dll
+0x00007fff9e660000 - 0x00007fff9e686000 	C:\WINDOWS\System32\GDI32.dll
+0x00007fff9c990000 - 0x00007fff9cb24000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007fff9ceb0000 - 0x00007fff9cf4e000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007fff9cc80000 - 0x00007fff9cd7a000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007fff8ef40000 - 0x00007fff8f1c5000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.535_none_e6c3b34713100821\COMCTL32.dll
+0x00007fff9d9d0000 - 0x00007fff9dd06000 	C:\WINDOWS\System32\combase.dll
+0x00007fff9ce30000 - 0x00007fff9ceb0000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007fff9e690000 - 0x00007fff9e6be000 	C:\WINDOWS\System32\IMM32.DLL
+0x000000005ff60000 - 0x0000000060032000 	D:\Programe Facultate\android studio\jre\jre\bin\msvcr100.dll
+0x000000005f560000 - 0x000000005fda6000 	D:\Programe Facultate\android studio\jre\jre\bin\server\jvm.dll
+0x00007fff9e350000 - 0x00007fff9e358000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007fff969e0000 - 0x00007fff969ea000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007fff96dc0000 - 0x00007fff96de4000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007fff96d90000 - 0x00007fff96dbd000 	C:\WINDOWS\SYSTEM32\winmmbase.dll
+0x00007fff9c940000 - 0x00007fff9c98a000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x00007fff98440000 - 0x00007fff98449000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007fff9f1c0000 - 0x00007fff9f22f000 	C:\WINDOWS\System32\ws2_32.DLL
+0x00007fff97450000 - 0x00007fff9745f000 	D:\Programe Facultate\android studio\jre\jre\bin\verify.dll
+0x00007fff96820000 - 0x00007fff96849000 	D:\Programe Facultate\android studio\jre\jre\bin\java.dll
+0x00007fff96800000 - 0x00007fff96816000 	D:\Programe Facultate\android studio\jre\jre\bin\zip.dll
+0x00007fff9e9f0000 - 0x00007fff9f0d5000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007fff9f500000 - 0x00007fff9f5a9000 	C:\WINDOWS\System32\shcore.dll
+0x00007fff9cf80000 - 0x00007fff9d6ff000 	C:\WINDOWS\System32\windows.storage.dll
+0x00007fff9c870000 - 0x00007fff9c88f000 	C:\WINDOWS\System32\profapi.dll
+0x00007fff9c820000 - 0x00007fff9c86a000 	C:\WINDOWS\System32\powrprof.dll
+0x00007fff9c7f0000 - 0x00007fff9c800000 	C:\WINDOWS\System32\UMPDC.dll
+0x00007fff9e180000 - 0x00007fff9e1d2000 	C:\WINDOWS\System32\shlwapi.dll
+0x00007fff9c890000 - 0x00007fff9c8a1000 	C:\WINDOWS\System32\kernel.appcore.dll
+0x00007fff9d9b0000 - 0x00007fff9d9c7000 	C:\WINDOWS\System32\cryptsp.dll
+0x00007fff96070000 - 0x00007fff9608a000 	D:\Programe Facultate\android studio\jre\jre\bin\net.dll
+0x00007fff9c060000 - 0x00007fff9c0c7000 	C:\WINDOWS\system32\mswsock.dll
+0x00007fff93d00000 - 0x00007fff93d11000 	D:\Programe Facultate\android studio\jre\jre\bin\nio.dll
+0x00007fff825b0000 - 0x00007fff825d6000 	C:\Users\Catalina Dumitru\.gradle\native\29\windows-amd64\native-platform.dll
+0x00007fff97440000 - 0x00007fff9744d000 	D:\Programe Facultate\android studio\jre\jre\bin\management.dll
+0x00007fff9bbd0000 - 0x00007fff9bc03000 	C:\WINDOWS\system32\rsaenh.dll
+0x00007fff9cf50000 - 0x00007fff9cf76000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007fff9c710000 - 0x00007fff9c735000 	C:\WINDOWS\SYSTEM32\USERENV.dll
+0x00007fff9c230000 - 0x00007fff9c23c000 	C:\WINDOWS\SYSTEM32\CRYPTBASE.dll
+0x00007fff9bd70000 - 0x00007fff9bdaa000 	C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+0x00007fff9e6c0000 - 0x00007fff9e6c8000 	C:\WINDOWS\System32\NSI.dll
+0x00007fff93d20000 - 0x00007fff93d36000 	C:\WINDOWS\SYSTEM32\dhcpcsvc6.DLL
+0x00007fff93f10000 - 0x00007fff93f2c000 	C:\WINDOWS\SYSTEM32\dhcpcsvc.DLL
+0x00007fff9bdb0000 - 0x00007fff9be7a000 	C:\WINDOWS\SYSTEM32\DNSAPI.dll
+0x0000000066e00000 - 0x0000000066f03000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-8a36b223-e58a-4e7a-9a81-729bc84cc2e1\sqlite-3.25.2-9946a09b-3145-479d-ab21-e8702941eb80-sqlitejdbc.dll
+0x00000000266b0000 - 0x00000000267b3000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-bb6ab295-bed1-4ad3-bccf-3dacf3d3d3af\sqlite-3.25.2-93d542e8-77d8-4f91-aee5-3d753b5fb1aa-sqlitejdbc.dll
+0x0000000027d50000 - 0x0000000027e53000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-28878373-d53d-4e3a-9816-f76d4aa0312c\sqlite-3.25.2-585371d8-fc6f-4aea-af43-d5fc7b375362-sqlitejdbc.dll
+0x000000002a080000 - 0x000000002a183000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-28571881-2765-4ad6-953b-2106e03c1399\sqlite-3.25.2-4a7bde09-e5c4-4b6e-95ee-f62ce731a769-sqlitejdbc.dll
+0x0000000027e60000 - 0x0000000027f63000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-869bd610-34cc-4a41-994c-57d16856beeb\sqlite-3.25.2-c53d91c6-1b9e-4780-a97d-f31112761533-sqlitejdbc.dll
+0x000000002a390000 - 0x000000002a493000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-2c931920-b072-42fb-85ca-29f5f3edadfb\sqlite-3.25.2-56c34c43-609a-4f10-8669-8185f33c70cf-sqlitejdbc.dll
+0x0000000027420000 - 0x0000000027523000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-16a5de8e-76df-46a2-9e66-e517ba1105f8\sqlite-3.25.2-4991c6a2-57f1-4add-8a6f-4ee56ddc6e14-sqlitejdbc.dll
+0x000000002aaa0000 - 0x000000002aba3000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-028cb253-7a15-467b-b879-179f9c9f6a07\sqlite-3.25.2-9e32029b-a1c5-4f11-a8a3-158c3d38608b-sqlitejdbc.dll
+0x000000002b9e0000 - 0x000000002bae3000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-e6f0b226-502c-47b7-a04d-4c46210325ae\sqlite-3.25.2-3bc4d325-a53b-40a1-99e1-33e962d8da0a-sqlitejdbc.dll
+0x000000002bcf0000 - 0x000000002bdf3000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-78a7a0a9-449a-481b-a4e8-da7d8a239469\sqlite-3.25.2-23d1339d-eb17-47c2-a61c-b202e313102f-sqlitejdbc.dll
+0x000000002ca60000 - 0x000000002cb63000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-ef3e0ee0-4447-43c4-9531-e25886c8e484\sqlite-3.25.2-b0cb5a0e-1f9b-43fe-8051-96cbbb464f35-sqlitejdbc.dll
+0x000000002e450000 - 0x000000002e553000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-5a587acb-8a23-4be1-a293-5a55e8c120ed\sqlite-3.25.2-d2397033-358b-4c10-9ef7-4724cd01a280-sqlitejdbc.dll
+0x000000002cd70000 - 0x000000002ce73000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-07935151-8ed7-4e0d-a136-36cb5bbf06ca\sqlite-3.25.2-1b3f9aef-dfb8-4f81-b71d-ebc556b3471a-sqlitejdbc.dll
+0x000000002f160000 - 0x000000002f263000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-95c6608d-c664-4c26-9076-ccfaf0845e48\sqlite-3.25.2-f3f1613f-3745-498a-b49f-01a813e23a20-sqlitejdbc.dll
+0x000000002f670000 - 0x000000002f773000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-25c78b26-1aa4-4400-b21c-8bd344966af1\sqlite-3.25.2-02a31d95-3098-4a0a-a2ce-6e95b0c7a944-sqlitejdbc.dll
+0x000000002f780000 - 0x000000002f883000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-23e37950-d937-43aa-a178-cba64b7b34c8\sqlite-3.25.2-8385d554-b0b5-4bdc-be40-5b645eb2f8e2-sqlitejdbc.dll
+0x0000000030520000 - 0x0000000030623000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-be76812c-8838-48bb-9a3d-6941c0468eaf\sqlite-3.25.2-e6937628-c8ff-4247-874c-becd8dc7c279-sqlitejdbc.dll
+0x0000000030940000 - 0x0000000030a43000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-2fbc581b-d098-42b4-bad7-11b333d87e01\sqlite-3.25.2-e0e8e6f6-0772-4880-bf2e-0626e5401790-sqlitejdbc.dll
+0x0000000030630000 - 0x0000000030733000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-328f6f40-eac6-4496-bcf3-1889392006c5\sqlite-3.25.2-a8e1bac0-dea6-4c75-a8d1-a90d540a9875-sqlitejdbc.dll
+0x0000000031090000 - 0x0000000031193000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-4ca8c5a6-a552-43d5-ae9c-84b5c345728b\sqlite-3.25.2-c4f01f22-81ed-4a1e-93c8-80f3342a06c1-sqlitejdbc.dll
+0x00000000315d0000 - 0x00000000316d3000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-64b9e2b9-9d1c-42ac-98da-f16b32092c25\sqlite-3.25.2-8c0288d9-54d3-4a55-a8d1-25cad584ad4f-sqlitejdbc.dll
+0x0000000031d00000 - 0x0000000031e03000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-1b8ac8a7-a5fd-404e-94b8-c10909af9ac7\sqlite-3.25.2-09e09ffb-ca7d-419f-a1b5-278c347242ec-sqlitejdbc.dll
+0x0000000032430000 - 0x0000000032533000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-2883221a-bb46-40b8-ad9e-bad83d3b61ac\sqlite-3.25.2-8f0a7d2e-00a7-40d0-a332-b28ed7a8fe9a-sqlitejdbc.dll
+0x00000000337a0000 - 0x00000000338a3000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-d7bb33ae-5622-40a8-b3bc-5b01b87a9933\sqlite-3.25.2-341ce594-d43d-40a5-84c6-8f288b1f3c44-sqlitejdbc.dll
+0x00000000348b0000 - 0x00000000349b3000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-f43d9f70-f246-4117-9f8d-26901c013028\sqlite-3.25.2-7e842758-ea77-43b1-8f09-93a4078e5c98-sqlitejdbc.dll
+0x0000000034bc0000 - 0x0000000034cc3000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-c32476d1-974a-49b6-96f2-6606445f6d48\sqlite-3.25.2-332a4f08-df43-4d7f-b0d5-1b49da54dfc6-sqlitejdbc.dll
+0x00000000352d0000 - 0x00000000353d3000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-1ef6ba3f-162c-4a28-8821-b22c88d8087a\sqlite-3.25.2-07e47717-3251-4c41-b4f5-bf77d91687a1-sqlitejdbc.dll
+0x00000000355e0000 - 0x00000000356e3000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-b87f7f62-b767-4f21-ad9c-d009d4d3399d\sqlite-3.25.2-421f6832-1a26-46dd-9a38-f88374f963d2-sqlitejdbc.dll
+0x0000000036740000 - 0x0000000036843000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-9321b969-5625-46ad-84d6-47918ef75297\sqlite-3.25.2-ad38956f-dc37-4dc2-8190-014177ac2dc9-sqlitejdbc.dll
+0x0000000036e50000 - 0x0000000036f53000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-6846b0e6-06dd-4362-bdc8-73668c37f05b\sqlite-3.25.2-00fbfa99-73d9-4046-a56f-8652500c077f-sqlitejdbc.dll
+0x0000000037360000 - 0x0000000037463000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-32e1bfbc-de8d-4b51-9b5f-ce343985b9a3\sqlite-3.25.2-65ea5396-ca44-4eef-8806-82bf005e9316-sqlitejdbc.dll
+0x0000000037870000 - 0x0000000037973000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-39877503-f0c6-4ba7-a81b-1cc11bc4972e\sqlite-3.25.2-4983aa46-e6ec-475e-a71b-75019e577f14-sqlitejdbc.dll
+0x0000000037ff0000 - 0x00000000380f3000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-437fc367-8841-4864-bc18-5911646e38b2\sqlite-3.25.2-458235cf-7424-4649-beaa-13d28ff49bfb-sqlitejdbc.dll
+0x0000000038100000 - 0x0000000038203000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-cff825ac-b666-4b3d-95c1-b68319e270d3\sqlite-3.25.2-f69ae46b-10a9-459a-9b00-aba0a7a54ddf-sqlitejdbc.dll
+0x00000000393a0000 - 0x00000000394a3000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-e23669fd-4905-4208-a82e-a32b99fc51fa\sqlite-3.25.2-aab82d05-c338-4f2b-bae3-842e7b6947da-sqlitejdbc.dll
+0x00000000394b0000 - 0x00000000395b3000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-63263527-71fe-45b1-b054-19262f49a790\sqlite-3.25.2-62a7c06c-0eb3-42e5-81fd-868a759a1e6a-sqlitejdbc.dll
+0x000000003a230000 - 0x000000003a333000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-43ae72d9-00de-441b-abb9-598ee7ad2cc2\sqlite-3.25.2-c2ba0014-ea13-4397-b60c-c07c67a27799-sqlitejdbc.dll
+0x000000003c6f0000 - 0x000000003c7f3000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-4e686b0c-67a2-4400-ad40-3af6a4afece5\sqlite-3.25.2-8c1f5f36-d3da-464b-9679-24261e417949-sqlitejdbc.dll
+0x000000003be40000 - 0x000000003bf43000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-7d8b4890-08c3-4c4c-9b00-481891daa4d1\sqlite-3.25.2-a29f6bda-c57f-4c24-bf53-da87737e1b15-sqlitejdbc.dll
+0x000000003cc00000 - 0x000000003cd03000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-35930f66-42ad-438f-9779-3eaff4c6b27a\sqlite-3.25.2-f382ea63-84ef-4f24-9415-91fafeb778fa-sqlitejdbc.dll
+0x000000003d770000 - 0x000000003d873000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-c1d6813a-7b29-4744-ad7e-432fa66161d0\sqlite-3.25.2-82eb0c2b-5287-4b55-af78-b41ad40086fd-sqlitejdbc.dll
+0x000000003c570000 - 0x000000003c673000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-785e735d-2472-4feb-98f8-3b2f01d5d6db\sqlite-3.25.2-ae2727a3-df40-4374-8a6d-22985bd40661-sqlitejdbc.dll
+0x00007fff85040000 - 0x00007fff85064000 	D:\Programe Facultate\android studio\jre\jre\bin\sunec.dll
+0x00007fff8d750000 - 0x00007fff8d75a000 	C:\Windows\System32\rasadhlp.dll
+0x00007fff8fcb0000 - 0x00007fff8fd27000 	C:\WINDOWS\System32\fwpuclnt.dll
+0x00007fff96770000 - 0x00007fff9677b000 	D:\Programe Facultate\android studio\jre\jre\bin\sunmscapi.dll
+0x00007fff9cb30000 - 0x00007fff9cc79000 	C:\WINDOWS\System32\CRYPT32.dll
+0x00007fff9c800000 - 0x00007fff9c812000 	C:\WINDOWS\System32\MSASN1.dll
+0x00007fff83cc0000 - 0x00007fff83e5c000 	D:\Programe Facultate\android studio\jre\jre\bin\awt.dll
+0x00007fff9e1e0000 - 0x00007fff9e2a4000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007fff9af90000 - 0x00007fff9afbd000 	C:\WINDOWS\SYSTEM32\dwmapi.dll
+0x00007fff995b0000 - 0x00007fff99b70000 	C:\WINDOWS\SYSTEM32\d2d1.dll
+0x00007fff9a990000 - 0x00007fff9aa1f000 	C:\WINDOWS\SYSTEM32\apphelp.dll
+0x00007fff9aad0000 - 0x00007fff9ab69000 	C:\WINDOWS\system32\uxtheme.dll
+0x0000000040fd0000 - 0x00000000410d3000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-5c13f001-77f0-4038-9149-bfacf16db7a6\sqlite-3.25.2-9db0c544-a44f-48e3-9653-ed6f3e004f62-sqlitejdbc.dll
+0x00000000405d0000 - 0x00000000406d3000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-e87c3360-762f-478e-a852-4d188c973c18\sqlite-3.25.2-f37eba1a-9810-4b8c-b337-c9d5a722fb57-sqlitejdbc.dll
+0x0000000041be0000 - 0x0000000041ce3000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-e05a08c9-29fc-477d-a650-2bd04418e0f3\sqlite-3.25.2-69ceb5bb-df3f-4b87-bd16-0625020bd098-sqlitejdbc.dll
+0x000000004a700000 - 0x000000004a803000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-61ae4e5c-c3e1-4c4b-bf05-d57d39bcfebe\sqlite-3.25.2-1c569151-08d4-4907-8889-860f540faeda-sqlitejdbc.dll
+0x0000000044eb0000 - 0x0000000044fb3000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-8743fc5e-94ca-430c-aa25-b80e00fa7935\sqlite-3.25.2-de99b1d6-ce79-4d70-a754-30f4bc46903b-sqlitejdbc.dll
+0x000000004b440000 - 0x000000004b543000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-1cbffca8-1e3f-475b-a35c-4a63f2d42c05\sqlite-3.25.2-86a2c69d-3617-46ee-921a-adf04b02b575-sqlitejdbc.dll
+0x000000004c860000 - 0x000000004c963000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-0a01f71d-21f4-4a11-aaad-d2daaeb1df23\sqlite-3.25.2-be12ad66-342a-4e51-8bec-72cc74bec973-sqlitejdbc.dll
+0x000000004cd70000 - 0x000000004ce73000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-e173d0f9-5f79-4460-88a3-3116c8276dfc\sqlite-3.25.2-ab1c07d2-0844-4adc-9609-6929cf1440bb-sqlitejdbc.dll
+0x000000004d480000 - 0x000000004d583000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-03d14238-4e58-4b1b-bf9d-42c2cd4d003e\sqlite-3.25.2-6f91ee34-93ec-4b86-886b-9a6b11db4f8d-sqlitejdbc.dll
+0x000000004db90000 - 0x000000004dc93000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-8f77a1fe-fd46-46b1-9b58-164d683d1e89\sqlite-3.25.2-ff1d5cc2-9f0f-4249-ab3f-fb046901f708-sqlitejdbc.dll
+0x000000004e2a0000 - 0x000000004e3a3000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-17b179f8-e747-4218-b2c0-1294f68493bf\sqlite-3.25.2-3c72dfcb-e8b1-4e70-bbe3-8797592b1ec3-sqlitejdbc.dll
+0x000000004eb10000 - 0x000000004ec13000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-3b858908-e0e7-4e6a-85da-59ad60ad6c6b\sqlite-3.25.2-7606e181-bfe3-44d6-9928-6fb930916a08-sqlitejdbc.dll
+0x0000000050340000 - 0x0000000050443000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-d48759c9-6306-4972-b1c5-375f1a854aa9\sqlite-3.25.2-8d8783ca-243a-4df2-9bdd-4fe3483394f5-sqlitejdbc.dll
+0x000000004f6d0000 - 0x000000004f7d3000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-b5a7d592-19d4-4469-b6d9-a3bcc93ab67e\sqlite-3.25.2-8b4420a3-499b-498a-8883-21697462b5ef-sqlitejdbc.dll
+0x0000000051d70000 - 0x0000000051e73000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-761bcc93-833a-4919-bd28-4051752f2be4\sqlite-3.25.2-3a70c200-f7fa-450d-8cf8-5ec26ba4130e-sqlitejdbc.dll
+0x0000000052a40000 - 0x0000000052b43000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-790d8a7c-3ddd-4b32-911a-4eb6bbe23ae6\sqlite-3.25.2-443a3b68-6cba-4082-9252-405dfd81ceee-sqlitejdbc.dll
+0x000000004ae10000 - 0x000000004af13000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-e9bb7598-46f9-4bb3-9aa3-2000cc9d67cd\sqlite-3.25.2-7999ff49-a9fd-44c5-b736-000742ed01cb-sqlitejdbc.dll
+0x000000004a030000 - 0x000000004a133000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-90451bf7-25c2-4eac-a920-983b88faf88a\sqlite-3.25.2-f90f510e-5a60-425a-8cdf-779ad45452e2-sqlitejdbc.dll
+0x0000000058290000 - 0x0000000058393000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-4a9fe8a1-ccbe-4e45-922d-c8acc3cfbf2c\sqlite-3.25.2-75cf69ec-1c37-4be9-afd2-30b147dd2bfb-sqlitejdbc.dll
+0x000000004c710000 - 0x000000004c813000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-393f77f7-792d-4412-934b-be28a1d65b66\sqlite-3.25.2-ffded020-8a1b-4a06-84bd-907005ec4368-sqlitejdbc.dll
+0x00000000524e0000 - 0x00000000525e3000 	C:\Users\Catalina Dumitru\AppData\Local\Temp\room-c54b9ab6-1ad4-4a8a-88ea-54073e4b119e\sqlite-3.25.2-a550bfe6-a77c-46b9-b9cb-3d98283a3b1b-sqlitejdbc.dll
+
+VM Arguments:
+jvm_args: -Xmx1536m -Dfile.encoding=windows-1252 -Duser.country=GB -Duser.language=en -Duser.variant 
+java_command: org.gradle.launcher.daemon.bootstrap.GradleDaemon 5.4.1
+java_class_path (initial): C:\Users\Catalina Dumitru\.gradle\wrapper\dists\gradle-5.4.1-all\3221gyojl5jsh0helicew7rwx\gradle-5.4.1\lib\gradle-launcher-5.4.1.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Programe Facultate\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Users\Catalina Dumitru\AppData\Local\Microsoft\WindowsApps;D:\Programe Facultate\Microsoft VS Code\bin;C:\Users\Catalina Dumitru\AppData\Local\GitHubDesktop\bin;C:\Users\Catalina Dumitru\AppData\Local\Microsoft\WindowsApps;C:\Users\Catalina Dumitru\AppData\Roaming\npm
+USERNAME=Catalina Dumitru
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 18362 (10.0.18362.329)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 142 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 8260324k(404280k free), swap 21467092k(4896k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.202-b03) for windows-amd64 JRE (1.8.0_202-release-1483-b03), built by "builder" with MS VC++ 10.0 (VS2010)
+
+time: Sun Jan 05 03:34:27 2020
+timezone: GTB Standard Time
+elapsed time: 57656 seconds (0d 16h 0m 56s)
+
